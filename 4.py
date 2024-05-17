@@ -17,4 +17,6 @@ for element in browser.find_elements(By.TAG_NAME, "div"):
 
 print(hatnotes)
 hatnote = random.choice(hatnotes)
-link = 
+link = hatnote.find_element(By.TAG_NAME, "a").get_attribute("href")
+browser.get(link)
+time.sleep(2)
